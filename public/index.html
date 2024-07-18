@@ -46,12 +46,11 @@
           var script = document.createElement("script");
           var divWidget = document.createElement("div");
           divWidget.id = "widget";
-          script.src =
-            "https://main--widgetflp.netlify.app/static/js/widget.js";
+          script.src = "http://localhost:3000/static/js/widget.js";
           script.async = true;
           script.type = "text/javascript";
           script.dataset.clientId = clientId;
-          document.getElementById("root").appendChild(divWidget);
+          document.body.appendChild(divWidget);
           document.body.appendChild(script);
         }
         function onLoad() {
@@ -65,8 +64,5 @@
         }
       })();
     </script>
-
-    <!-- minified version -->
-    <!-- <script>(function(){function lw(cId){var s=document.createElement("script");var d=document.createElement("div");d.id="widget";s.src="https://main--widgetflp.netlify.app/static/js/widget.js";s.async=true;s.type="text/javascript";s.dataset.clientId=cId;document.getElementById("root").appendChild(d);document.body.appendChild(s);}function onLoad(){var cId="123";lw(cId);}if(window.attachEvent){window.attachEvent("onload",onLoad);}else{window.addEventListener("load",onLoad,false);}})();</script> -->
   </body>
 </html>
