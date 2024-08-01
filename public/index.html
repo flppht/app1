@@ -43,6 +43,14 @@
     <script>
       (function () {
         function loadWidget(clientId) {
+          if (window.gtag) {
+            window.gtag("event", "your_event", {
+              event_category: "your_category",
+              event_label: "your_label",
+            });
+          } else {
+            console.error("gtag not defined");
+          }
           var script = document.createElement("script");
           var divWidget = document.createElement("div");
           divWidget.id = "widget";
